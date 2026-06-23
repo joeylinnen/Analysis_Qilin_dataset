@@ -1,0 +1,16 @@
+HEADLINE RESULTS
+================
+requests:              139,927
+sessions:              87,030
+users:                 11,935
+multi-click requests:  96,835
+baseline cross-column: 85.4%
+
+SQ1 intent V = 0.019
+SQ2 depth  V = 0.028
+SQ3 zone   V = 0.158 (position-based, artifactual)
+
+Exposure-based SQ3 (corrected):
+        Exposure    OR  CI_low  CI_high     p
+    Any position 0.807   0.771    0.844 0.000
+Early only (<=6) 0.926   0.877    0.977 0.005

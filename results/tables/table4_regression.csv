@@ -1,0 +1,7 @@
+,OR,CI_low,CI_high,p
+Intercept,50.3,46.567,54.331,0.0
+Clicks per request (centered),2.929,2.85,3.01,0.0
+Intent: goal-oriented,1.046,1.003,1.09,0.034
+Session depth: Mid,1.231,1.132,1.339,0.0
+Session depth: Deep,1.246,1.107,1.403,0.0
+Ad exposed (commercial),0.807,0.771,0.844,0.0

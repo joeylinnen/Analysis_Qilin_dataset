@@ -1,0 +1,4 @@
+SQ,Variable,V,Effect
+SQ1,User Intent,0.019,Negligible
+SQ2,Session Depth,0.028,Negligible
+SQ3,Ad Proximity (position-based),0.158,Artifactual (see exposure model)
