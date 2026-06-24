@@ -1,0 +1,17 @@
+# Raw / intermediate data — do not redistribute the Qilin dataset
+*.csv
+*.png
+qilin_notes_flags.csv
+
+# ...but DO keep the committed results folder (figures + tables)
+!results/
+!results/**
+
+# notebook / python cruft
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# macOS metadata
+._*
+.DS_Store
