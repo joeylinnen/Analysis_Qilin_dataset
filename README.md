@@ -2,22 +2,22 @@
 
 Code for the MSc thesis *"Why Two-Column Grid Navigation Stays Flat: User Intent,* 
 
-*Session Depth, and Ads in Mobile Feeds"* (Information Studies — Information
+*Session Depth, and Ads in Mobile Feeds"* (Information Studies, Information
 Systems, University of Amsterdam).
 
 The analysis studies how users navigate two-column content grids on the mobile
 UGC platform Xiaohongshu (RedNote), using the **Qilin** dataset. It measures
-*column engagement* — whether a request's clicks span both columns or stay within
-one — and models it against user intent, session depth, and advertising exposure
+*column engagement*, whether a request's clicks span both columns or stay within
+one, and models it against user intent, session depth, and advertising exposure
 with a binary logistic regression (HC3 standard errors).
 
 ## Repository contents
 
-* `Qilin\_dataset\_analysis.ipynb` — the full, self-contained analysis notebook.
-It rebuilds the dataset **from the raw Qilin release** and reproduces every
+* `Qilin\_dataset\_analysis.ipynb`, the full, self-contained analysis notebook.
+It rebuilds the dataset from the raw Qilin release and reproduces every
 table and figure in the thesis: the preprocessing summary, SQ1–SQ3, the joint
 logistic regression, and the three figures.
-* `results/` — the generated outputs, committed for convenience so they can be
+* `results/, the generated outputs, committed for convenience so they can be
 viewed without re-running the notebook: the three figures (PNG), every results
 table (CSV), and a `summary.txt` of the headline numbers. These are produced by
 the final cell of the notebook on a full run.
@@ -49,9 +49,9 @@ and may take a while (several GB). The built request log is cached as
 
 ## How to run
 
-1. Clone the repo and launch Jupyter **from the repository folder**.
+1. Clone the repo and launch Jupyter from the repository folder.
 2. Run the first ("Bootstrap") cell once to install dependencies, then
-**Cell → Run All**.
+Cell → Run All.
 
 The notebook is controlled by a `REBUILD\_FROM\_RAW` flag near the top: leave it
 `True` for the first run to build everything from raw; set it to `False`
@@ -67,16 +67,16 @@ pip install -r requirements.txt
 
 The combined request log is built from the raw Qilin splits as follows:
 
-1. Load and concatenate the **search** splits (`search\_train` + `search\_test`)
-and the **recommendation** splits (`recommendation\_train` +
+1. Load and concatenate the search splits (`search\_train` + `search\_test`)
+and the recommendation splits (`recommendation\_train` +
 `recommendation\_test`).
 2. Merge each module with the user-feature table (`user\_feat`) on `user\_idx`.
-3. Filter **both** modules to mobile platforms (iOS / Android).
+3. Filter both modules to mobile platforms (iOS / Android).
 4. Concatenate the two filtered modules and label intent by origin
 (Search → goal-oriented, Recommendation → exploratory).
 
-This yields the analysis set: **139,927 requests across 87,030 sessions from
-11,935 users**, of which **96,835 are multi-click requests** — the unit on which
+This yields the analysis set: 139,927 requests across 87,030 sessions from
+11,935 users, of which 96,835 are multi-click requests, the unit on which
 column engagement is computed. The notebook prints these counts at every stage
 so the pipeline is fully transparent.
 
